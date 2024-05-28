@@ -16,3 +16,11 @@ When(
 When("the user clicks the login button", () => {
   authentication.submitLogin();
 });
+
+Then("the user should be redirected to the login page", () => {
+  authentication.verifyLoginForm();
+});
+
+Then("the user should see an error message saying {string}", (text) => {
+  authentication.verifyErrorMessage(text);
+});

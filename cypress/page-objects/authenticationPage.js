@@ -6,6 +6,7 @@ class AuthenticationPage {
     this.passwordField = '[data-test="password"]';
     this.loginButton = '[data-test="login-button"]';
     this.loginFrom = '[data-test="login-container"]';
+    this.errorMessage = '[data-test="error"]';
   }
 
   goToHomePage() {
@@ -26,6 +27,9 @@ class AuthenticationPage {
   }
   verifyLoginForm() {
     cy.get(this.loginFrom).should("be.visible");
+  }
+  verifyErrorMessage(text) {
+    cy.get(this.errorMessage).should("have.text", text);
   }
 }
 

@@ -16,7 +16,7 @@ class HomePage {
 
   logout() {
     cy.get(this.menuButton).click();
-    y.get(this.logoutButton).click();
+    cy.get(this.logoutButton).click();
   }
 }
 
