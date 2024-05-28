@@ -58,7 +58,7 @@ Feature: Authentication
         | username           | password      | 
         | abasdsad           | secret_sauce  |    
     
-    Scenario: Login with case-sensitive username
+    Scenario: Login with case-sensitive credentials
         When the user enters the username "<username>" and the password "<password>"
         And the user clicks the login button
         Then the user should see an error message saying "Epic sadface: Username and password do not match any user in this service"
@@ -76,7 +76,7 @@ Feature: Authentication
         | username             | password      | 
         | ' OR 1=1; --         | ' OR 1=1; --  |
 
-    Scenario: Login with a locked out user
+    Scenario: Login with a locked-out user
         When the user enters the username "<username>" and the password "<password>"
         And the user clicks the login button
         Then the user should see an error message saying "Epic sadface: Sorry, this user has been locked out."
@@ -85,7 +85,7 @@ Feature: Authentication
         | username             | password         | 
         | locked_out_user      | secret_sauce     |
 
-    Scenario: Login with empty an username and password
+    Scenario: Login with empty username and password
         When the user enters the username "<username>" and the password "<password>"
         And the user clicks the login button
         Then the user should see an error message saying "Epic sadface: Username is required"
