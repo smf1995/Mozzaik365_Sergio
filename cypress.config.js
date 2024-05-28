@@ -12,7 +12,6 @@ async function setupNodeEvents(on, config) {
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents,
-    baseUrl: "https://qa-challenge.codesubmit.io",
     specPattern: "cypress/features/*.feature",
     watchForFileChanges: false,
     chromeWebSecurity: false,

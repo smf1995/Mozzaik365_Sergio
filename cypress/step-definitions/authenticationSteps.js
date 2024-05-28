@@ -8,8 +8,12 @@ Given("the user navigates to the login page", () => {
 When(
   "the user enters the username {string} and the password {string}",
   (username, password) => {
-    authentication.fillTheUsernameField(username);
-    authentication.fillThePasswordField(password);
+    if (username) {
+      authentication.fillTheUsernameField(username);
+    }
+    if (password) {
+      authentication.fillThePasswordField(password);
+    }
   }
 );
 
