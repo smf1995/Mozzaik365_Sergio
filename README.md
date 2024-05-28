@@ -43,3 +43,10 @@ The main focus of this solution was on the sign-in feature. Here is the list of 
 - Login with empty username and password
 - Login with an empty username
 - Login with an empty password
+
+## Possible Improvements
+
+Here are some improvements that can be implemented:
+
+- Utilize a data file (e.g., data.json) instead of hardcoded data to retrieve the required data for testing scenarios.
+- Implement CI/CD pipelines to automate the build process and execute tests, ensuring continuous integration and deployment.
